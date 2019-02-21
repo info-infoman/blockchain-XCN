@@ -3,14 +3,14 @@
 const EventEmitter = require('events')
 const old = require('old')
 const { expandTarget, compressTarget } = require('bitcoin-util')
-const { types } = require('bitcoin-protocol')
+const { types } = require('bitcoin-protocol-XCN')
 const createHash = require('create-hash')
 const BN = require('bn.js')
 const MapDeque = require('map-deque')
 
-const retargetInterval = 2016
-const targetSpacing = 10 * 60 // 10 minutes
-const targetTimespan = retargetInterval * targetSpacing
+const targetSpacing = 1 * 60 // 1 minute
+const targetTimespan = 1 * 60 * 60 * 24 // 1 day
+const retargetInterval = targetTimespan / targetSpacing;
 const maxTimeIncrease = 8 * 60 * 60 // 8 hours
 const maxTarget = expandTarget(0x1d00ffff)
 const maxReorgDepth = retargetInterval
