@@ -1,5 +1,5 @@
 {
-  "name": "blockchain-spv",
+  "name": "blockchain-XCN",
   "version": "3.3.0",
   "description": "Stores blockchain headers and verifies transactions with SPV",
   "main": "index.js",
